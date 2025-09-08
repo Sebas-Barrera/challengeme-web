@@ -1,27 +1,68 @@
 {
-  "name": "challengeme-web",
-  "version": "0.1.0",
+  "name": "challengeme-landing",
+  "version": "1.0.0",
+  "description": "Landing page para ChallengeMe - El anfitrión digital que nunca se queda sin ideas",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "export": "next export",
+    "analyze": "cross-env ANALYZE=true next build",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "framer-motion": "^10.18.0",
+    "lucide-react": "^0.292.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-use": "^17.6.0",
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "@next/bundle-analyzer": "^14.0.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20.19.13",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.5.6",
+    "typescript": "^5.9.2"
+  },
+  "keywords": [
+    "challengeme",
+    "landing-page",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "party-app",
+    "social-app",
+    "techvision"
+  ],
+  "author": {
+    "name": "TechVision",
+    "email": "contacto@techvision.com",
+    "url": "https://techvision.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techvision/challengeme-landing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techvision/challengeme-landing/issues"
+  },
+  "homepage": "https://challengeme.app",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }
