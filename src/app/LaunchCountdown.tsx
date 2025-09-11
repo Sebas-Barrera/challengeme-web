@@ -141,7 +141,7 @@ const LaunchCountdown = () => {
               transition={{ duration: 0.8 }}
               className="text-2xl md:text-3xl font-bold mb-3"
             >
-              La revolución de las <span className="bg-gradient-primary bg-clip-text text-transparent">conversaciones</span> está por llegar
+              La revolución de las <span className="bg-gradient-primary bg-clip-text text-transparent">reuniones</span> está por llegar
             </motion.h2>
             
             <motion.p 
