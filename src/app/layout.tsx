@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'ChallengeMe | La app que hace que las pláticas valgan la pena',
+  title: 'ChallengeMe.. | La app que hace que las pláticas valgan la pena',
   description: 'Ya no más conversaciones aburridas. Preguntas que de verdad importan para conectar con tu gente de otra manera.',
   keywords: ['party app', 'conversaciones', 'preguntas profundas', 'amigos', 'parejas', 'juegos sociales'],
   authors: [{ name: 'TechVision' }],
@@ -25,16 +25,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'ChallengeMe | La app que hace que las pláticas valgan la pena',
+    title: 'ChallengeMe.. | La app que hace que las pláticas valgan la pena',
     description: 'Ya no más conversaciones aburridas. Preguntas que de verdad importan para conectar con tu gente de otra manera.',
     url: 'https://challengeme.app',
-    siteName: 'ChallengeMe',
+    siteName: 'ChallengeMe.',
     images: [
       {
         url: '/assets/og-image.jpg', // Aquí irá tu imagen OG
         width: 1200,
         height: 630,
-        alt: 'ChallengeMe - Conversaciones que valen la pena',
+        alt: 'ChallengeMe. - Conversaciones que valen la pena',
       },
     ],
     locale: 'es_MX',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ChallengeMe | La app que hace que las pláticas valgan la pena',
+    title: 'ChallengeMe. | La app que hace que las pláticas valgan la pena',
     description: 'Ya no más conversaciones aburridas. Preguntas que de verdad importan.',
     images: ['/assets/twitter-image.jpg'], // Tu imagen de Twitter
     creator: '@challengeme_app',
