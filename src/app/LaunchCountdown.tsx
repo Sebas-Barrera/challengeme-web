@@ -57,7 +57,7 @@ const LaunchCountdown = () => {
   const isLaunched = timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
+    <section className="relative py-20 px-4 overflow-hidden" id="inicio">
       {/* Fondo con gradiente */}
       <div className="absolute inset-0 bg-gradient-to-br from-challenge-purple/20 via-challenge-pink/20 to-challenge-orange/20" />
       

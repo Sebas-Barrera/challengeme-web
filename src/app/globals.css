@@ -325,3 +325,316 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+/* Mejoras adicionales para globals.css */
+
+/* Variables CSS mejoradas para responsividad */
+:root {
+  --challenge-purple: #7b46f8;
+  --challenge-pink: #fa51a2;
+  --challenge-orange: #fd8616;
+  --challenge-green: #bdf522;
+  --challenge-dark: #1a1a1a;
+  --challenge-gray: #2a2a2a;
+  --challenge-light-gray: #4a4a4a;
+
+  /* Tamaños responsivos */
+  --text-hero-mobile: 2.5rem;
+  --text-hero-tablet: 3.5rem;
+  --text-hero-desktop: 4.5rem;
+  --text-hero-xl: 5.5rem;
+}
+
+/* Mejoras para texto hero responsivo */
+.text-hero {
+  font-size: var(--text-hero-mobile);
+  line-height: 1.1;
+}
+
+@media (min-width: 640px) {
+  .text-hero {
+    font-size: var(--text-hero-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-hero {
+    font-size: var(--text-hero-desktop);
+  }
+}
+
+@media (min-width: 1280px) {
+  .text-hero {
+    font-size: var(--text-hero-xl);
+  }
+}
+
+/* Mejoras para componentes de tarjetas */
+.card-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card-glass:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(123, 70, 248, 0.1);
+}
+
+/* Mejoras para el scroll indicator */
+.scroll-indicator {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    opacity: 0.8;
+    scale: 0.9;
+  }
+}
+
+/* Mejoras para el video container */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.video-container::before {
+  content: "";
+  display: block;
+  padding-top: 188.89%; /* Aspect ratio 9:16.9 aproximadamente */
+}
+
+.video-container > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mejoras para el mockup responsivo */
+.iphone-mockup {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+}
+
+.iphone-screen {
+  position: absolute;
+  top: 6.4%;
+  left: 9.8%;
+  right: 9.8%;
+  bottom: 4.7%;
+  border-radius: 8%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Mejoras para grids responsivos */
+.responsive-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .responsive-grid {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-grid {
+    gap: 4rem;
+  }
+}
+
+/* Mejoras para spacing responsivo */
+.section-padding {
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 6rem 2rem;
+  }
+}
+
+/* Mejoras para texto responsivo */
+.responsive-text-lg {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .responsive-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-text-lg {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-text-lg {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+}
+
+/* Mejoras para botones responsivos */
+.btn-responsive {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .btn-responsive {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-responsive {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    border-radius: 1rem;
+  }
+}
+
+/* Mejoras para animaciones responsivas */
+@media (prefers-reduced-motion: reduce) {
+  .animate-bounce,
+  .animate-pulse,
+  .animate-float {
+    animation: none;
+  }
+
+  .hover-lift:hover {
+    transform: none;
+  }
+}
+
+/* Mejoras para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .hover-lift:hover {
+    transform: none;
+  }
+
+  .card-glass:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Mejoras para orientación landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+  .min-h-screen {
+    min-height: 100vh;
+  }
+
+  .section-padding {
+    padding: 2rem 1rem;
+  }
+
+  .text-hero {
+    font-size: 2rem;
+  }
+}
+
+/* Mejoras para dispositivos muy pequeños */
+@media (max-width: 375px) {
+  .text-hero {
+    font-size: 2rem;
+  }
+
+  .responsive-text-lg {
+    font-size: 0.875rem;
+  }
+
+  .section-padding {
+    padding: 2rem 0.75rem;
+  }
+}
+
+/* Mejoras para dispositivos muy grandes */
+@media (min-width: 1536px) {
+  .text-hero {
+    font-size: 6rem;
+  }
+
+  .responsive-text-lg {
+    font-size: 1.375rem;
+    line-height: 1.8;
+  }
+}
+
+/* Utilitarios adicionales para responsividad */
+.container-responsive {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    max-width: 1536px;
+  }
+}

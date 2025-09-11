@@ -78,11 +78,11 @@ const ComingSoon = () => {
   }
 
   return (
-    <section ref={containerRef} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-challenge-gray/10 relative overflow-hidden">
-      {/* Floating background elements - Hidden on mobile for performance */}
+    <section ref={containerRef} className="section-padding bg-gradient-to-b from-transparent to-challenge-gray/10 relative overflow-hidden">
+      {/* Floating background elements - Escondidos en móvil para rendimiento */}
       <motion.div 
         style={{ y: y1 }}
-        className="hidden md:block absolute top-20 left-4 lg:left-10 w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-challenge-pink/10 to-challenge-purple/10 rounded-full blur-xl"
+        className="hidden lg:block absolute top-20 left-4 xl:left-10 w-16 h-16 lg:w-24 lg:h-24 xl:w-32 xl:h-32 bg-gradient-to-br from-challenge-pink/10 to-challenge-purple/10 rounded-full blur-xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.6, 0.3]
@@ -95,7 +95,7 @@ const ComingSoon = () => {
       />
       <motion.div 
         style={{ y: y2 }}
-        className="hidden md:block absolute bottom-20 right-4 lg:right-10 w-32 h-32 lg:w-40 lg:h-40 bg-gradient-to-br from-challenge-orange/10 to-challenge-green/10 rounded-full blur-xl"
+        className="hidden lg:block absolute bottom-20 right-4 xl:right-10 w-20 h-20 lg:w-32 lg:h-32 xl:w-40 xl:h-40 bg-gradient-to-br from-challenge-orange/10 to-challenge-green/10 rounded-full blur-xl"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.6, 0.3, 0.6]
@@ -108,14 +108,14 @@ const ComingSoon = () => {
         }}
       />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="container-responsive relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
           <motion.div 
             className="inline-flex items-center bg-gradient-primary/10 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 backdrop-blur-sm border border-white/10"
@@ -136,11 +136,13 @@ const ComingSoon = () => {
             </motion.div>
             <span className="text-challenge-pink font-semibold text-xs sm:text-sm">Coming Soon</span>
           </motion.div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-4">
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
             Lo que está <span className="text-gradient">por venir</span>
           </h2>
+          
           <motion.p 
-            className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4"
+            className="responsive-text-lg text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -156,9 +158,9 @@ const ComingSoon = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-16 sm:mb-20"
+          className="mb-12 sm:mb-16 lg:mb-20"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div className="responsive-grid items-center">
             {/* Text Content */}
             <motion.div variants={fadeInUp} className="space-y-4 sm:space-y-6 order-2 lg:order-1">
               <motion.div 
@@ -176,13 +178,13 @@ const ComingSoon = () => {
                   <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </motion.div>
                 <div className="min-w-0">
-                  <h3 className="text-xl sm:text-2xl font-bold">Date Ideas</h3>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">Date Ideas</h3>
                   <p className="text-challenge-pink text-xs sm:text-sm font-medium">Tu cupido digital personal</p>
                 </div>
               </motion.div>
               
               <motion.p 
-                className="text-gray-300 text-base sm:text-lg leading-relaxed"
+                className="text-gray-300 responsive-text-lg leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -269,7 +271,7 @@ const ComingSoon = () => {
               className="relative flex justify-center order-1 lg:order-2 lg:justify-end"
             >
               <motion.div 
-                className="relative"
+                className="relative max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px] xl:max-w-[500px] w-full"
                 variants={floatingAnimation}
                 initial="initial"
                 animate="animate"
@@ -295,9 +297,8 @@ const ComingSoon = () => {
                   alt="Date Ideas Mockup"
                   width={720}
                   height={1540}
-                  className="rounded-2xl sm:rounded-3xl shadow-2xl relative z-10 w-auto h-auto max-w-[720px] sm:max-w-[550px]"
+                  className="rounded-2xl sm:rounded-3xl shadow-2xl relative z-10 w-full h-auto"
                 />
-            
               </motion.div>
             </motion.div>
           </div>
@@ -310,14 +311,14 @@ const ComingSoon = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Mockup - On the left for desktop, order-1 for mobile */}
+          <div className="responsive-grid items-center">
+            {/* Mockup - A la izquierda en desktop, order-1 en móvil */}
             <motion.div
               variants={fadeInUp}
               className="relative flex justify-center lg:justify-start order-1"
             >
               <motion.div 
-                className="relative"
+                className="relative max-w-[280px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-[400px] w-full"
                 variants={floatingAnimation}
                 initial="initial"
                 animate="animate"
@@ -344,12 +345,12 @@ const ComingSoon = () => {
                   alt="Drinking Games Mockup"
                   width={350}
                   height={550}
-                  className="rounded-2xl sm:rounded-3xl shadow-2xl relative z-10 w-auto h-auto max-w-[350px] sm:max-w-[400px] md:max-w-[380px]"
+                  className="rounded-2xl sm:rounded-3xl shadow-2xl relative z-10 w-full h-auto"
                 />
               </motion.div>
             </motion.div>
 
-            {/* Text Content - On the right for desktop, order-2 for mobile */}
+            {/* Text Content - A la derecha en desktop, order-2 en móvil */}
             <motion.div variants={fadeInUp} className="space-y-4 sm:space-y-6 order-2">
               <motion.div 
                 className="flex items-center space-x-3 mb-4"
@@ -387,13 +388,13 @@ const ComingSoon = () => {
                   </motion.div>
                 </motion.div>
                 <div className="min-w-0">
-                  <h3 className="text-xl sm:text-2xl font-bold">Party Games</h3>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">Drinking Games</h3>
                   <p className="text-challenge-orange text-xs sm:text-sm font-medium">El alma de toda fiesta</p>
                 </div>
               </motion.div>
               
               <motion.p 
-                className="text-gray-300 text-base sm:text-lg leading-relaxed"
+                className="text-gray-300 responsive-text-lg leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -481,7 +482,7 @@ const ComingSoon = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="text-center mt-12 sm:mt-16 p-6 sm:p-8 card-glass rounded-2xl sm:rounded-3xl relative overflow-hidden mx-4 sm:mx-0"
+          className="text-center mt-12 sm:mt-16 p-6 sm:p-8 card-glass rounded-2xl sm:rounded-3xl relative overflow-hidden"
           whileHover={{ scale: 1.02 }}
         >
           <motion.div
@@ -496,11 +497,11 @@ const ComingSoon = () => {
             }}
           />
           <div className="relative z-10">
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
               ¿Quieres ser el primero en <span className="text-gradient">probarlo</span>?
             </h3>
-            <p className="text-gray-300 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base">
-              Mantente al tanto de el lanzamiento de ChallenMe. De esta manera, serás de las primeras personas en descargarla.
+            <p className="text-gray-300 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg">
+              Mantente al tanto del lanzamiento de ChallengeMe. De esta manera, serás de las primeras personas en descargarla.
             </p>
             <motion.div 
               className="flex items-center justify-center space-x-2 text-challenge-green"

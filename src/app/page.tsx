@@ -66,10 +66,28 @@ export default function HomePage() {
 
           <div className="hidden md:flex items-center space-x-8">
             <a
-              href="#features"
+              href="#inicio"
               className="hover:text-challenge-pink transition-colors"
             >
-              Features
+              Inicio
+            </a>
+            <a
+              href="#app-demo"
+              className="hover:text-challenge-pink transition-colors"
+            >
+              Demo
+            </a>
+            <a
+              href="#comming-soon"
+              className="hover:text-challenge-pink transition-colors"
+            >
+              Coming
+            </a>
+            <a
+              href="#caracteristicas"
+              className="hover:text-challenge-pink transition-colors"
+            >
+              Caracteristicas
             </a>
             <a
               href="#pricing"
@@ -77,15 +95,7 @@ export default function HomePage() {
             >
               Precios
             </a>
-            <a
-              href="#faq"
-              className="hover:text-challenge-pink transition-colors"
-            >
-              FAQ
-            </a>
           </div>
-
-          <div className="text-sm text-gray-400">Próximamente 2025</div>
         </nav>
       </motion.header>
 
@@ -118,8 +128,9 @@ export default function HomePage() {
                 variants={fadeInUp}
                 className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"
               >
-                ChallengeMe. Es ese arfitrión que todos quieren en sus reuniones y fiestas, aquel que pone
-                el ambiente y nunca se queda sin ideas para divertirse.
+                ChallengeMe. Es ese arfitrión que todos quieren en sus reuniones
+                y fiestas, aquel que pone el ambiente y nunca se queda sin ideas
+                para divertirse.
               </motion.p>
 
               <motion.div
@@ -174,11 +185,13 @@ export default function HomePage() {
         </div>
       </section>
 
-       <VideoHomePage />
+      <VideoHomePage />
 
-       <VideoChallenges />
+      <VideoChallenges />
 
-       <ComingSoon />
+      <div id="comming-soon">
+        <ComingSoon />
+      </div>
 
       {/* Métricas de Impacto */}
       <section className="py-16 px-4">
@@ -189,11 +202,10 @@ export default function HomePage() {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              { number: "10k+", label: "Conversaciones épicas", icon: "💬" },
               { number: "4.8★", label: "Rating de conexión", icon: "⭐" },
-              { number: "15+", label: "Países conectando", icon: "🌎" },
+              { number: "3+", label: "Países conectando", icon: "🌎" },
               {
                 number: "89%",
                 label: "Dice que cambió su relación",
@@ -220,7 +232,7 @@ export default function HomePage() {
       </section>
 
       {/* Categorías de Conversaciones */}
-      <section id="features" className="py-20 px-4">
+      <section id="caracteristicas" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -608,12 +620,6 @@ export default function HomePage() {
                   "Tranqui, puedes empezar con preguntas más ligeras y después ir subiendo la intensidad. Cada categoría tiene diferentes niveles para que no te sientas abrumado.",
               },
               {
-                question:
-                  "¿Mis conversaciones se guardan o van a chismear mis secretos?",
-                answer:
-                  "Para nada. Todo queda en tu dispositivo. Nosotros no vemos ni guardamos nada de lo que hablas. Tu privacidad es sagrada.",
-              },
-              {
                 question: "¿Funciona si soy medio antisocial?",
                 answer:
                   "¡Claro! De hecho es perfecto para gente que no sabe cómo empezar conversaciones profundas. Las preguntas hacen todo el trabajo pesado por ti.",
@@ -720,112 +726,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-4 border-t border-white/10">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm">
-                  <Image
-                    src="/assets/ChallengeMe-06.png"
-                    alt="Logo"
-                    width={120}
-                    height={120}
-                  />
-                </div>
-                <span className="text-lg font-bold">ChallengeMe</span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                La app que hace que las conversaciones valgan la pena.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Producto</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Precios
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Descargar
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Soporte</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contacto
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Ayuda
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Privacidad
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Términos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Cookies
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="mailto:info@challengeme.app"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              📧 Contacto
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              🐦 Twitter
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              📱 Instagram
-            </a>
-          </div>
-        </div>
-      </footer>
+      
     </main>
   );
 }
